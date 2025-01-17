@@ -1,4 +1,9 @@
 %% 欧拉角转换为四元数 ，att的顺序为横滚 俯仰 航向 ；公式来源于牛小骥PPT第二部分附录
+'''
+欧拉角(Euler Angles)和四元数(Quaternion)都是用于表示物体旋转的数学工具。
+欧拉角表示旋转的三个角度（横滚、俯仰、航向），而四元数则使用四个数值来表示旋转，更加适合计算机处理，
+因为它避免了万向锁(Gimbal Lock)问题。
+'''
 function qnb = a2qua(att)
 % Convert Euler angles to attitude quaternion.
 % 转换欧拉角到四元数

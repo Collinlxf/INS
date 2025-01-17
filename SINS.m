@@ -21,6 +21,10 @@ if isRead ~= 1
    fileID = fopen('IMU.bin','r');
    imuData = fread(fileID,'double'); 
    transImuData = reshape(imuData,7,size(imuData, 1)/7)'; %把数据按照七行进行读取，坐标系是北东地坐标系
+   %transImuData中
+   %1：第一列时间戳
+   %2-4：陀螺仪数据（单位：弧度/秒）
+    %5-7：加速度计数据（单位：m/s^2）
    fclose(fileID);
    %读取参考结果（参考结果非真值，是另一套惯导算法推算的结果）
    refFileID = fopen('Reference.bin','r');
